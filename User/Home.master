@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title><link rel="shortcut icon" href="css/images/favicon.ico" />
+    <link href="StyleSheet.css" rel="Stylesheet" type="text/css" />
+	<link rel="Stylesheet" href="css/style.css" type="text/css" media="all" />
+	
+	<script src="js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--[if IE 6]>
+		<script src="js/DD_belatedPNG-min.js" type="text/javascript" charset="utf-8"></script>
+	<![endif]-->
+	<script src="js/cufon-yui.js" type="text/javascript"></script>
+	<script src="js/Myriad_Pro_700.font.js" type="text/javascript"></script>
+	<script src="js/jquery.jcarousel.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/functions.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+      <div id="wrapper">
+		<!-- Begin Header -->
+		<div id="header">
+			<!-- Begin Shell -->
+			<div class="shell">
+				<div  id="logo">
+                    <asp:TextBox ID="txtsearch"  runat="server" placeholder="Search Here....." CssClass="txt" Height="30px" 
+                        Width="384px"></asp:TextBox>
+                    <asp:Button ID="Button1" runat="server" CssClass="btn" Font-Bold="True" 
+                        Height="34px" Text="SEARCH" onclick="Button1_Click" Width="80px" />
+                </div>
+				<div id="top-nav">
+					<ul>
+						<li ><a href="HomePage.aspx" title="Home"></a></li>
+						<li><a href="Contactus.aspx"" ></a></li>
+						<li><a href="Admin\Login.aspx" ></a></li>
+						&nbsp;<!--<li><a href="#" title="Blog"><span>Blog</span></a></li>--></ul>
+				</div>
+				<div class="cl">&nbsp;</div>
+				<p id="cart"><span class="profile">Welcome 
+                    <asp:Label ID="lblname" runat="server" ForeColor="#FF33CC"></asp:Label>
+&nbsp;</span><span class="shopping">Shopping Cart (<asp:Label ID="lbl" runat="server"></asp:Label>
+                    ) </span>&nbsp;&nbsp;
+                    <asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="True" 
+                        Font-Underline="True" PostBackUrl="~/HomePage.aspx" 
+                        CausesValidation="False">LogOut</asp:LinkButton>
+                </p>
+			</div>
+			<!-- End Shell -->
+		</div>
+		<!-- End Header -->
+		<!-- Begin Navigation -->
+		<div id="navigation">
+			<!-- Begin Shell -->
+			<div class="shell">
+				<ul>
+					<li ><a href="Home.aspx" title="Home">HOME</a></li>
+                    <li>
+						<a  title="Category">Category</a>
+						<div class="dd">
+							<ul>
+								<li><a href="Item.aspx?cat=sony" title="Sony">Sony</a></li>
+                            <li><a href="Item.aspx?cat=nikon" title="Nikon">nikon</a></li>
+							<li>
+						<a href="Item.aspx?cat=samsung" title="Samsung">Samsung</a></li>
+							<li><a href="Item.aspx?cat=fujifilm" title="Fijifilm">Fujifilm</a></li>
+					<li><a href="Item.aspx?cat=canon" title="Canon">canon</a></li>
+					<li><a href="Item.aspx?cat=kodak" title="Kodak">kodak</a></li>
+					<li><a href="Item.aspx?cat=panasonic" title="panasonic">panasonic</a></li>
+					<li><a href="Item.aspx?cat=pentax" title="pentax">pentax</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="Account.aspx" title="Sony">MY ACCOUNT</a></li>
+					<li><a href="Order.aspx">MY ORDER</a></li>
+					<li>
+						<a href="Payment.aspx" title="Samsung">PAYMENT</a>
+						<!--<div class="dd">
+							<ul>
+								<li><a href="#" title="Drop down menu 1">Drop down menu 1</a></li>
+								<li><a href="#" title="Drop down menu 2">Drop down menu 2</a></li>
+								<li>
+									<a href="#" title="Drop down menu 3">Drop down menu 3</a>
+									<div class="dd">
+										<ul>
+											<li><a href="#" title="Drop down menu 1">Drop down menu 1</a></li>
+											<li><a href="#" title="Drop down menu 2">Drop down menu 2</a></li>
+											<li><a href="#" title="Drop down menu 3">Drop down menu 3</a></li>
+											<li><a href="#" title="Drop down menu 4">Drop down menu 4</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#" title="Drop down menu 4">Drop down menu 4</a></li>
+								<li><a href="#" title="Drop down menu 5">Drop down menu 5</a></li>
+							</ul>
+						</div>-->
+					</li><li><a href="Receipt.aspx" title="Fujifilm">RECEIPT</a></li>
+					<li><a href="ChangePass.aspx" title="Fujifilm">CHANG PASSWORD</a></li>
+					<li><a href="Cart.aspx" title="Fujifilm">MY CART</a></li>
+                    
+					 
+				</ul>
+				<div class="cl">&nbsp;</div>
+			</div>
+			<!-- End Shell -->
+		</div>
+		<!-- End Navigation -->
+		<!-- Begin Slider -->
+		<!-- End Slider -->
+		<!-- Begin Main -->
+		<div id="main" class="shell">
+			<!-- Begin Content -->
+			<!-- End Content -->
+			<!-- Begin Sidebar -->
+			<!-- End Sidebar -->
+			<div class="cl">&nbsp;</div>
+			<!-- Begin Products -->
+			<div id="products">
+                <table class="style1">
+                    <tr>
+                        <td>
+                             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>&nbsp;</td>
+                    </tr>
+                </table>
+&nbsp;<div class="cl">&nbsp;</div>
+				<div class="cl">&nbsp;dd</div>
+				<div class="cl">&nbsp;</div>
+			</div>
+			<!-- End Products -->
+			<!-- Begin Products Slider -->
+			<!-- End Products Slider -->
+		</div>
+		<!-- End Main -->
+		<!-- Begin Footer -->
+		<div id="footer">
+			<div class="boxes">
+				<!-- Begin Shell -->
+				<!-- End Shell -->
+				<!-- Begin Shell -->
+				<div class="shell">
+                   
+                         
+                            &nbsp;<img src="css/images/cart-img1.jpg" alt="PayPal" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            
+                                <img src="css/images/cart-img2.jpg" alt="VISA" /></a>&nbsp;&nbsp;&nbsp; 
+                           <a href="#" title="MasterCard">
+                                <img src="css/images/cart-img3.jpg" alt="MasterCard" /></a>
+                         
+                    
+                    <p>
+                        © Onlinecamerashopping.com</p>
+                    <div class="cl">
+                        &nbsp;</div>
+                </div>
+				<!-- End Shell -->
+			</div>
+		</div>
+		<!-- End Footer -->
+	</div>
+       
+    
+    </form>
+</body>
+</html>
